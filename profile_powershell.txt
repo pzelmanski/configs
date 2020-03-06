@@ -1,0 +1,10 @@
+Import-Module posh-git
+Import-Module oh-my-posh
+
+set-theme Paradox
+
+# Menu tab completion 
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Chord UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Chord DownArrow -Function HistorySearchForward
+Set-PSReadlineOption -ShowToolTips -BellStyle None -HistorySearchCursorMovesToEnd -HistoryNoDuplicates 
